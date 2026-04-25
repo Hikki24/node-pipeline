@@ -1,0 +1,13 @@
+services:
+  app:
+    image: hikkimaru/node-pipeline:latest
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 30 --cleanup
+    restart: unless-stopped
