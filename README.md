@@ -23,3 +23,5 @@ On every git push to main branch:
 - GitHub Actions (CI/CD)
 - Watchtower (local auto-update)
 - Railway (cloud hosting)
+
+<!-- Deployment test -->
